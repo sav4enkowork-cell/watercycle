@@ -8,109 +8,89 @@ interface StageInfo {
   description: string
   facts: string[]
   color: string
+  bgColor: string
 }
 
 const stagesData: Record<string, StageInfo> = {
   evaporation: {
     title: 'Испарение',
-    emoji: '🌊',
-    description: 'Солнце нагревает воду в океанах, морях, реках и озёрах. Вода превращается в невидимый водяной пар и поднимается вверх в атмосферу.',
+    emoji: '☀️→💨',
+    description: 'Солнце нагревает воду в океанах, морях, реках и озёрах. Вода превращается в невидимый водяной пар и поднимается вверх в атмосферу. Это главный «двигатель» всего круговорота!',
     facts: [
-      'Океаны — главный источник испарения: с их поверхности испаряется около 86% всей влаги',
+      'Океаны — главный источник: с их поверхности испаряется 86% всей влаги',
       'Каждый день с поверхности Земли испаряется около 1,4 триллиона тонн воды',
       'Скорость испарения зависит от температуры, ветра и влажности воздуха',
+      'При испарении вода очищается — соли и минералы остаются внизу',
     ],
-    color: '#f59e0b',
+    color: '#ea580c',
+    bgColor: '#fff7ed',
   },
   condensation: {
     title: 'Конденсация',
-    emoji: '☁️',
-    description: 'Водяной пар поднимается высоко в небо, где становится холоднее. Пар охлаждается и превращается в крошечные капельки воды или кристаллики льда — так образуются облака.',
+    emoji: '💨→☁️',
+    description: 'Водяной пар поднимается высоко в небо, где температура ниже. Пар охлаждается и превращается в крошечные капельки воды или кристаллики льда вокруг пылинок — так образуются облака.',
     facts: [
       'Облако может весить от нескольких сотен до миллиона тонн!',
-      'Капельки в облаке настолько малы (0,01 мм), что падают очень медленно',
+      'Капельки в облаке настолько малы (0,01 мм), что почти не падают',
       'Для образования капель нужна «затравка» — пылинки или частицы соли',
+      'Высота облаков может достигать 18 км!',
     ],
-    color: '#94a3b8',
+    color: '#64748b',
+    bgColor: '#f1f5f9',
   },
   precipitation: {
     title: 'Осадки',
-    emoji: '🌧️',
-    description: 'Когда капельки в облаке становятся слишком тяжёлыми, они падают на землю в виде дождя, снега, града или измороси.',
+    emoji: '☁️→🌧️',
+    description: 'Когда капельки в облаке сливаются и становятся слишком тяжёлыми, они падают на землю в виде дождя, снега, града или измороси.',
     facts: [
       'Капля дождя падает со скоростью около 30 км/ч',
-      'Снежинка — это ледяной кристалл с шестью лучами',
+      'Снежинка — это ледяной кристалл, всегда имеющий 6 лучей',
       'В мире выпадает около 505 000 км³ осадков в год',
+      'Град может падать со скоростью до 160 км/ч!',
     ],
-    color: '#3b82f6',
+    color: '#2563eb',
+    bgColor: '#eff6ff',
   },
   runoff: {
-    title: 'Сток',
-    emoji: '🏞️',
-    description: 'Вода, выпавшая на землю, стекает по склонам в ручьи, реки и в итоге попадает обратно в океаны и моря. Так цикл замыкается.',
+    title: 'Поверхностный сток',
+    emoji: '🏔️→🌊',
+    description: 'Вода, выпавшая на землю, стекает по склонам гор и холмов в ручьи, реки и в итоге попадает обратно в океаны и моря. Так цикл замыкается!',
     facts: [
-      'Амазонка — самая полноводная река мира, она несёт 20% всей речной воды планеты',
+      'Амазонка — самая полноводная река мира, несёт 20% всей речной воды планеты',
       'Поверхностный сток формирует рельеф: создаёт долины, каньоны, ущелья',
       'Только 35% выпавших осадков возвращается в океан через реки',
+      'Нил — самая длинная река мира (6670 км)',
     ],
-    color: '#06b6d4',
+    color: '#0891b2',
+    bgColor: '#ecfeff',
   },
   infiltration: {
-    title: 'Инфильтрация',
-    emoji: '💧',
-    description: 'Часть воды просачивается в почву и горные породы, пополняя подземные воды. Эти воды могут годами, веками и даже тысячелетиями находиться под землёй.',
+    title: 'Инфильтрация (подземный сток)',
+    emoji: '💧→⬇️',
+    description: 'Часть воды просачивается сквозь почву и горные породы глубоко под землю, пополняя подземные водоносные горизонты. Эти воды могут находиться под землёй годами и тысячелетиями.',
     facts: [
       'Подземные воды составляют около 30% всех пресных вод Земли',
-      'Вода может проходить через почву со скоростью от нескольких мм до метров в сутки',
+      'Вода проходит через почву со скоростью от мм до метров в сутки',
       'Самые древние подземные воды имеют возраст более миллиона лет!',
+      'Подземные воды питают родники и колодцы',
     ],
-    color: '#8b5cf6',
+    color: '#7c3aed',
+    bgColor: '#f5f3ff',
   },
   transpiration: {
     title: 'Транспирация',
-    emoji: '🌳',
+    emoji: '🌳→💨',
     description: 'Растения «выдыхают» воду! Они впитывают её корнями из почвы и испаряют через листья. Это похоже на испарение, но происходит через живые организмы.',
     facts: [
       'Одно большое дерево может испарить до 400 литров воды в день',
-      'Транспирация — это около 10% всей влаги в атмосфере',
+      'Транспирация — около 10% всей влаги в атмосфере',
       'Леса — важнейшие «фабрики» влаги, они создают свой микроклимат',
+      'Леса Амазонки создают «летающие реки» — огромные потоки водяного пара',
     ],
-    color: '#10b981',
+    color: '#059669',
+    bgColor: '#ecfdf5',
   },
 }
-
-const quizQuestions = [
-  {
-    question: 'Какой этап круговорота воды происходит при нагреве воды солнцем?',
-    options: ['Конденсация', 'Испарение', 'Осадки', 'Инфильтрация'],
-    correct: 1,
-  },
-  {
-    question: 'Что такое конденсация?',
-    options: [
-      'Вода стекает по склонам',
-      'Растения испаряют воду',
-      'Водяной пар превращается в капли в облаках',
-      'Вода просачивается в почву',
-    ],
-    correct: 2,
-  },
-  {
-    question: 'Сколько процентов воды на Земле — пресная?',
-    options: ['50%', '25%', 'около 3%', '10%'],
-    correct: 2,
-  },
-  {
-    question: 'Как называется процесс, при котором растения «выдыхают» воду?',
-    options: ['Фотосинтез', 'Транспирация', 'Инфильтрация', 'Сублимация'],
-    correct: 1,
-  },
-  {
-    question: 'Откуда берётся основная часть водяного пара в атмосфере?',
-    options: ['Из вулканов', 'Из рек', 'Из океанов', 'Из ледников'],
-    correct: 2,
-  },
-]
 
 export default function App() {
   const [activeStage, setActiveStage] = useState<Stage>(null)
@@ -120,16 +100,22 @@ export default function App() {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
   const [showResult, setShowResult] = useState(false)
 
+  const quizQuestions = [
+    { question: 'Какой этап круговорота воды происходит при нагреве воды солнцем?', options: ['Конденсация', 'Испарение', 'Осадки', 'Инфильтрация'], correct: 1 },
+    { question: 'Что такое конденсация?', options: ['Вода стекает по склонам', 'Растения испаряют воду', 'Водяной пар превращается в капли в облаках', 'Вода просачивается в почву'], correct: 2 },
+    { question: 'Сколько процентов воды на Земле — пресная?', options: ['50%', '25%', 'около 3%', '10%'], correct: 2 },
+    { question: 'Как называется процесс, при котором растения «выдыхают» воду?', options: ['Фотосинтез', 'Транспирация', 'Инфильтрация', 'Сублимация'], correct: 1 },
+    { question: 'Откуда берётся основная часть водяного пара в атмосфере?', options: ['Из вулканов', 'Из рек', 'Из океанов', 'Из ледников'], correct: 2 },
+  ]
+
   const handleStageClick = (stage: Stage) => {
-    setActiveStage(stage)
+    setActiveStage(activeStage === stage ? null : stage)
   }
 
   const handleQuizAnswer = (idx: number) => {
     if (selectedAnswer !== null) return
     setSelectedAnswer(idx)
-    if (idx === quizQuestions[quizStep].correct) {
-      setScore(score + 1)
-    }
+    if (idx === quizQuestions[quizStep].correct) setScore(score + 1)
     setTimeout(() => {
       if (quizStep < quizQuestions.length - 1) {
         setQuizStep(quizStep + 1)
@@ -150,431 +136,522 @@ export default function App() {
   const info = activeStage ? stagesData[activeStage] : null
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-200 via-sky-100 to-emerald-50 font-[Nunito]">
+    <div className="min-h-screen bg-gradient-to-b from-sky-200 via-sky-100 to-emerald-50">
       {/* Header */}
-      <header className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-5 px-6 shadow-lg">
-        <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-4">
+      <header className="bg-gradient-to-r from-blue-700 to-cyan-600 text-white py-4 px-4 shadow-xl">
+        <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-3">
           <div>
-            <h1 className="text-3xl md:text-4xl font-black flex items-center gap-3">
+            <h1 className="text-2xl md:text-4xl font-black flex items-center gap-2">
               💧 Круговорот воды в природе
             </h1>
             <p className="text-blue-100 mt-1 text-sm md:text-base">
-              Интерактивное пространство для юных исследователей
+              Мировой круговорот воды — интерактивная схема для школьников
             </p>
           </div>
           <button
             onClick={() => setShowQuiz(true)}
-            className="bg-white text-blue-600 font-bold px-5 py-2.5 rounded-full shadow-md hover:scale-105 transition-transform"
+            className="bg-yellow-400 text-blue-900 font-black px-5 py-2.5 rounded-full shadow-lg hover:scale-105 transition-transform text-sm md:text-base"
           >
-            🧠 Пройти викторину
+            🧠 Проверь себя!
           </button>
         </div>
       </header>
 
-      {/* Main scene */}
-      <div className="max-w-7xl mx-auto px-4 py-6">
-        <p className="text-center text-slate-700 mb-4 text-sm md:text-base">
-          👆 Нажимай на элементы сцены, чтобы узнать больше о каждом этапе круговорота!
-        </p>
+      {/* Hint */}
+      <div className="max-w-7xl mx-auto px-4 pt-4">
+        <div className="bg-yellow-100 border-2 border-yellow-400 rounded-xl p-3 text-center">
+          <p className="text-yellow-900 font-bold text-sm md:text-base">
+            👆 Нажимай на элементы схемы или на стрелки, чтобы узнать больше о каждом этапе!
+          </p>
+        </div>
+      </div>
 
-        <div className="relative w-full bg-gradient-to-b from-sky-300 via-sky-200 to-emerald-100 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-          <svg viewBox="0 0 1000 600" className="w-full h-auto block">
+      {/* Main scene - full width SVG */}
+      <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className="relative w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-sky-300">
+          <svg viewBox="0 0 1200 700" className="w-full h-auto block" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#7dd3fc" />
-                <stop offset="100%" stopColor="#e0f2fe" />
+              {/* Gradients */}
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#38bdf8" />
+                <stop offset="60%" stopColor="#7dd3fc" />
+                <stop offset="100%" stopColor="#bae6fd" />
               </linearGradient>
-              <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#0ea5e9" />
+              <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#0284c7" />
+                <stop offset="50%" stopColor="#0369a1" />
                 <stop offset="100%" stopColor="#1e3a8a" />
               </linearGradient>
-              <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#86efac" />
-                <stop offset="100%" stopColor="#166534" />
+              <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#84cc16" />
+                <stop offset="100%" stopColor="#365314" />
               </linearGradient>
-              <linearGradient id="mountainGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#f1f5f9" />
-                <stop offset="40%" stopColor="#94a3b8" />
+              <linearGradient id="mountain1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#f8fafc" />
+                <stop offset="30%" stopColor="#94a3b8" />
                 <stop offset="100%" stopColor="#475569" />
               </linearGradient>
-              <radialGradient id="sunGrad">
-                <stop offset="0%" stopColor="#fef08a" />
-                <stop offset="60%" stopColor="#facc15" />
+              <linearGradient id="mountain2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#e2e8f0" />
+                <stop offset="40%" stopColor="#64748b" />
+                <stop offset="100%" stopColor="#334155" />
+              </linearGradient>
+              <radialGradient id="sun">
+                <stop offset="0%" stopColor="#fef9c3" />
+                <stop offset="50%" stopColor="#facc15" />
                 <stop offset="100%" stopColor="#f59e0b" />
               </radialGradient>
-              <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                <path d="M 0 0 L 10 5 L 0 10 z" fill="#1e40af" />
+              <linearGradient id="underground" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#78350f" />
+                <stop offset="100%" stopColor="#451a03" />
+              </linearGradient>
+              <linearGradient id="river" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="#38bdf8" />
+                <stop offset="100%" stopColor="#0284c7" />
+              </linearGradient>
+
+              {/* Arrow markers */}
+              <marker id="arrowOrange" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+                <path d="M 0 0 L 12 6 L 0 12 z" fill="#ea580c" />
               </marker>
-              <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                <path d="M 0 0 L 10 5 L 0 10 z" fill="#047857" />
+              <marker id="arrowBlue" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+                <path d="M 0 0 L 12 6 L 0 12 z" fill="#2563eb" />
               </marker>
-              <marker id="arrowPurple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                <path d="M 0 0 L 10 5 L 0 10 z" fill="#7c3aed" />
+              <marker id="arrowCyan" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+                <path d="M 0 0 L 12 6 L 0 12 z" fill="#0891b2" />
               </marker>
-              <marker id="arrowCyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                <path d="M 0 0 L 10 5 L 0 10 z" fill="#0891b2" />
+              <marker id="arrowGreen" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+                <path d="M 0 0 L 12 6 L 0 12 z" fill="#059669" />
+              </marker>
+              <marker id="arrowPurple" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+                <path d="M 0 0 L 12 6 L 0 12 z" fill="#7c3aed" />
+              </marker>
+              <marker id="arrowGray" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+                <path d="M 0 0 L 12 6 L 0 12 z" fill="#475569" />
               </marker>
             </defs>
 
-            {/* Sky */}
-            <rect width="1000" height="600" fill="url(#skyGrad)" />
+            {/* ===== SKY ===== */}
+            <rect width="1200" height="700" fill="url(#sky)" />
 
-            {/* Sun */}
+            {/* ===== SUN ===== */}
             <g onClick={() => handleStageClick('evaporation')} style={{ cursor: 'pointer' }}>
-              <circle cx="130" cy="100" r="55" fill="url(#sunGrad)" opacity="0.3">
-                <animate attributeName="r" values="55;65;55" dur="3s" repeatCount="indefinite" />
+              {/* Glow */}
+              <circle cx="150" cy="120" r="90" fill="#fbbf24" opacity="0.2">
+                <animate attributeName="r" values="90;100;90" dur="3s" repeatCount="indefinite" />
               </circle>
-              <circle cx="130" cy="100" r="42" fill="url(#sunGrad)" />
-              {/* Sun rays */}
-              {[...Array(12)].map((_, i) => (
-                <line
-                  key={i}
-                  x1="130"
-                  y1="100"
-                  x2={130 + Math.cos((i * 30 * Math.PI) / 180) * 75}
-                  y2={100 + Math.sin((i * 30 * Math.PI) / 180) * 75}
-                  stroke="#facc15"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  opacity="0.7"
-                >
-                  <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2s" begin={`${i * 0.15}s`} repeatCount="indefinite" />
-                </line>
-              ))}
-              <text x="130" y="195" textAnchor="middle" fontSize="16" fontWeight="800" fill="#92400e">☀️ СОЛНЦЕ</text>
+              <circle cx="150" cy="120" r="70" fill="#fbbf24" opacity="0.3">
+                <animate attributeName="r" values="70;80;70" dur="3s" repeatCount="indefinite" />
+              </circle>
+              {/* Sun body */}
+              <circle cx="150" cy="120" r="55" fill="url(#sun)" stroke="#f59e0b" strokeWidth="3" />
+              {/* Rays */}
+              {[...Array(12)].map((_, i) => {
+                const angle = (i * 30 * Math.PI) / 180
+                const x1 = 150 + Math.cos(angle) * 60
+                const y1 = 120 + Math.sin(angle) * 60
+                const x2 = 150 + Math.cos(angle) * 85
+                const y2 = 120 + Math.sin(angle) * 85
+                return (
+                  <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#f59e0b" strokeWidth="4" strokeLinecap="round">
+                    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin={`${i * 0.15}s`} repeatCount="indefinite" />
+                  </line>
+                )
+              })}
+              {/* Face */}
+              <circle cx="135" cy="110" r="5" fill="#92400e" />
+              <circle cx="165" cy="110" r="5" fill="#92400e" />
+              <path d="M 130 130 Q 150 145 170 130" stroke="#92400e" strokeWidth="3" fill="none" strokeLinecap="round" />
             </g>
 
-            {/* Clouds */}
+            {/* ===== CLOUDS ===== */}
             <g onClick={() => handleStageClick('condensation')} style={{ cursor: 'pointer' }}>
+              {/* Main cloud */}
               <g>
-                <animateTransform attributeName="transform" type="translate" values="0,0; 15,0; 0,0" dur="8s" repeatCount="indefinite" />
-                <ellipse cx="500" cy="90" rx="70" ry="25" fill="white" />
-                <ellipse cx="470" cy="80" rx="40" ry="25" fill="white" />
-                <ellipse cx="530" cy="75" rx="45" ry="28" fill="white" />
-                <ellipse cx="500" cy="70" rx="35" ry="22" fill="#f8fafc" />
+                <animateTransform attributeName="transform" type="translate" values="0,0; 20,0; 0,0" dur="10s" repeatCount="indefinite" />
+                <ellipse cx="600" cy="100" rx="100" ry="35" fill="white" />
+                <ellipse cx="550" cy="90" rx="60" ry="40" fill="white" />
+                <ellipse cx="650" cy="85" rx="70" ry="45" fill="white" />
+                <ellipse cx="600" cy="75" rx="50" ry="35" fill="#f8fafc" />
+                <ellipse cx="580" cy="110" rx="40" ry="25" fill="#f1f5f9" />
               </g>
+              {/* Second cloud */}
               <g>
-                <animateTransform attributeName="transform" type="translate" values="0,0; -10,0; 0,0" dur="10s" repeatCount="indefinite" />
-                <ellipse cx="750" cy="120" rx="55" ry="20" fill="white" />
-                <ellipse cx="730" cy="110" rx="35" ry="22" fill="white" />
-                <ellipse cx="770" cy="108" rx="38" ry="22" fill="#f8fafc" />
+                <animateTransform attributeName="transform" type="translate" values="0,0; -15,0; 0,0" dur="12s" repeatCount="indefinite" />
+                <ellipse cx="900" cy="140" rx="80" ry="30" fill="white" />
+                <ellipse cx="870" cy="130" rx="50" ry="35" fill="white" />
+                <ellipse cx="930" cy="125" rx="55" ry="38" fill="#f8fafc" />
               </g>
-              <text x="600" y="50" textAnchor="middle" fontSize="16" fontWeight="800" fill="#475569">☁️ ОБЛАКА (КОНДЕНСАЦИЯ)</text>
+              {/* Small cloud */}
+              <g>
+                <animateTransform attributeName="transform" type="translate" values="0,0; 10,0; 0,0" dur="8s" repeatCount="indefinite" />
+                <ellipse cx="350" cy="150" rx="50" ry="20" fill="white" opacity="0.9" />
+                <ellipse cx="340" cy="142" rx="35" ry="25" fill="white" opacity="0.9" />
+              </g>
             </g>
 
-            {/* Mountains */}
-            <polygon points="300,420 450,200 600,420" fill="url(#mountainGrad)" />
-            <polygon points="450,420 580,260 720,420" fill="url(#mountainGrad)" opacity="0.9" />
-            {/* Snow caps */}
-            <polygon points="420,240 450,200 480,240 465,245 450,235 435,245" fill="white" />
-            <polygon points="555,295 580,260 605,295 595,300 580,290 565,300" fill="white" />
+            {/* ===== MOUNTAINS ===== */}
+            {/* Left mountain */}
+            <polygon points="0,500 200,200 400,500" fill="url(#mountain1)" />
+            <polygon points="170,250 200,200 230,250 215,260 200,245 185,260" fill="white" />
+            {/* Right mountain */}
+            <polygon points="800,500 1000,220 1200,500" fill="url(#mountain2)" />
+            <polygon points="970,270 1000,220 1030,270 1015,280 1000,265 985,280" fill="white" />
+            {/* Middle hill */}
+            <ellipse cx="600" cy="500" rx="200" ry="80" fill="#65a30d" />
 
-            {/* Ground / land */}
-            <path d="M 0 420 Q 200 400 400 420 L 400 600 L 0 600 Z" fill="url(#groundGrad)" />
-            <path d="M 600 420 Q 800 400 1000 420 L 1000 600 L 600 600 Z" fill="url(#groundGrad)" />
+            {/* ===== GROUND ===== */}
+            <rect x="0" y="500" width="400" height="200" fill="url(#ground)" />
+            <rect x="800" y="500" width="400" height="200" fill="url(#ground)" />
 
-            {/* Sea / Ocean */}
-            <path d="M 400 420 Q 500 410 600 420 L 600 600 L 400 600 Z" fill="url(#seaGrad)" />
+            {/* ===== UNDERGROUND ===== */}
+            <rect x="0" y="620" width="400" height="80" fill="url(#underground)" opacity="0.7" />
+            <rect x="800" y="620" width="400" height="80" fill="url(#underground)" opacity="0.7" />
+            {/* Underground water drops */}
+            {[50, 120, 200, 280, 350, 850, 950, 1050, 1150].map((x, i) => (
+              <circle key={i} cx={x} cy={650 + (i % 3) * 15} r="4" fill="#60a5fa" opacity="0.6">
+                <animate attributeName="opacity" values="0.3;0.8;0.3" dur={`${2 + i * 0.3}s`} repeatCount="indefinite" />
+              </circle>
+            ))}
+
+            {/* ===== SEA / OCEAN ===== */}
+            <rect x="400" y="500" width="400" height="200" fill="url(#sea)" />
             {/* Waves */}
-            <path d="M 400 440 Q 425 435 450 440 T 500 440 T 550 440 T 600 440" stroke="white" strokeWidth="2" fill="none" opacity="0.6">
-              <animate attributeName="d" values="M 400 440 Q 425 435 450 440 T 500 440 T 550 440 T 600 440;M 400 440 Q 425 445 450 440 T 500 440 T 550 440 T 600 440;M 400 440 Q 425 435 450 440 T 500 440 T 550 440 T 600 440" dur="3s" repeatCount="indefinite" />
+            <path d="M 400 520 Q 450 510 500 520 T 600 520 T 700 520 T 800 520" stroke="white" strokeWidth="3" fill="none" opacity="0.5">
+              <animate attributeName="d" values="M 400 520 Q 450 510 500 520 T 600 520 T 700 520 T 800 520;M 400 520 Q 450 530 500 520 T 600 520 T 700 520 T 800 520;M 400 520 Q 450 510 500 520 T 600 520 T 700 520 T 800 520" dur="3s" repeatCount="indefinite" />
             </path>
-            <path d="M 400 470 Q 425 465 450 470 T 500 470 T 550 470 T 600 470" stroke="white" strokeWidth="2" fill="none" opacity="0.4">
-              <animate attributeName="d" values="M 400 470 Q 425 465 450 470 T 500 470 T 550 470 T 600 470;M 400 470 Q 425 475 450 470 T 500 470 T 550 470 T 600 470;M 400 470 Q 425 465 450 470 T 500 470 T 550 470 T 600 470" dur="4s" repeatCount="indefinite" />
+            <path d="M 400 550 Q 450 540 500 550 T 600 550 T 700 550 T 800 550" stroke="white" strokeWidth="2" fill="none" opacity="0.3">
+              <animate attributeName="d" values="M 400 550 Q 450 540 500 550 T 600 550 T 700 550 T 800 550;M 400 550 Q 450 560 500 550 T 600 550 T 700 550 T 800 550;M 400 550 Q 450 540 500 550 T 600 550 T 700 550 T 800 550" dur="4s" repeatCount="indefinite" />
             </path>
 
-            {/* Trees on the left */}
-            <g>
-              <rect x="80" y="380" width="10" height="40" fill="#78350f" />
-              <circle cx="85" cy="375" r="25" fill="#16a34a" />
-              <circle cx="75" cy="385" r="20" fill="#15803d" />
-              <circle cx="95" cy="385" r="20" fill="#166534" />
-            </g>
-            <g>
-              <rect x="200" y="390" width="8" height="30" fill="#78350f" />
-              <circle cx="204" cy="385" r="20" fill="#16a34a" />
-              <circle cx="195" cy="392" r="16" fill="#15803d" />
-            </g>
-            <g>
-              <rect x="320" y="385" width="10" height="35" fill="#78350f" />
-              <circle cx="325" cy="380" r="22" fill="#16a34a" />
-              <circle cx="315" cy="388" r="18" fill="#15803d" />
-            </g>
+            {/* ===== TREES ===== */}
+            {/* Left side trees */}
+            {[
+              { x: 50, y: 460, s: 1.2 },
+              { x: 130, y: 470, s: 1 },
+              { x: 220, y: 465, s: 1.1 },
+              { x: 310, y: 470, s: 0.9 },
+            ].map((t, i) => (
+              <g key={i} onClick={() => handleStageClick('transpiration')} style={{ cursor: 'pointer' }}>
+                <rect x={t.x - 5 * t.s} y={t.y} width={10 * t.s} height={40 * t.s} fill="#78350f" />
+                <circle cx={t.x} cy={t.y - 5 * t.s} r={25 * t.s} fill="#16a34a" />
+                <circle cx={t.x - 12 * t.s} cy={t.y + 5 * t.s} r={18 * t.s} fill="#15803d" />
+                <circle cx={t.x + 12 * t.s} cy={t.y + 5 * t.s} r={18 * t.s} fill="#166534" />
+              </g>
+            ))}
+            {/* Right side trees */}
+            {[
+              { x: 870, y: 465, s: 1.1 },
+              { x: 960, y: 470, s: 1 },
+              { x: 1050, y: 460, s: 1.2 },
+              { x: 1140, y: 470, s: 0.9 },
+            ].map((t, i) => (
+              <g key={i} onClick={() => handleStageClick('transpiration')} style={{ cursor: 'pointer' }}>
+                <rect x={t.x - 5 * t.s} y={t.y} width={10 * t.s} height={40 * t.s} fill="#78350f" />
+                <circle cx={t.x} cy={t.y - 5 * t.s} r={25 * t.s} fill="#16a34a" />
+                <circle cx={t.x - 12 * t.s} cy={t.y + 5 * t.s} r={18 * t.s} fill="#15803d" />
+                <circle cx={t.x + 12 * t.s} cy={t.y + 5 * t.s} r={18 * t.s} fill="#166534" />
+              </g>
+            ))}
 
-            {/* Trees on the right */}
-            <g>
-              <rect x="680" y="385" width="10" height="35" fill="#78350f" />
-              <circle cx="685" cy="380" r="22" fill="#16a34a" />
-              <circle cx="695" cy="388" r="18" fill="#15803d" />
-            </g>
-            <g>
-              <rect x="820" y="390" width="8" height="30" fill="#78350f" />
-              <circle cx="824" cy="385" r="20" fill="#16a34a" />
-            </g>
-            <g>
-              <rect x="920" y="385" width="10" height="35" fill="#78350f" />
-              <circle cx="925" cy="380" r="22" fill="#16a34a" />
-              <circle cx="915" cy="388" r="18" fill="#15803d" />
-            </g>
-
-            {/* River flowing from mountain to sea */}
+            {/* ===== RIVER ===== */}
             <g onClick={() => handleStageClick('runoff')} style={{ cursor: 'pointer' }}>
               <path
-                d="M 500 420 Q 520 450 540 480 Q 555 510 530 540 Q 510 570 500 600"
-                stroke="#38bdf8"
-                strokeWidth="14"
+                d="M 600 420 Q 620 450 640 480 Q 650 500 630 530 Q 610 560 600 600"
+                stroke="url(#river)"
+                strokeWidth="18"
                 fill="none"
-                opacity="0.8"
+                strokeLinecap="round"
+                opacity="0.9"
               />
               <path
-                d="M 500 420 Q 520 450 540 480 Q 555 510 530 540 Q 510 570 500 600"
+                d="M 600 420 Q 620 450 640 480 Q 650 500 630 530 Q 610 560 600 600"
                 stroke="white"
-                strokeWidth="3"
+                strokeWidth="4"
                 fill="none"
-                opacity="0.5"
-                strokeDasharray="8 8"
+                strokeLinecap="round"
+                opacity="0.4"
+                strokeDasharray="10 10"
               >
-                <animate attributeName="stroke-dashoffset" from="0" to="-32" dur="1.5s" repeatCount="indefinite" />
+                <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="1.5s" repeatCount="indefinite" />
               </path>
-              <text x="580" y="500" fontSize="14" fontWeight="800" fill="#0c4a6e">🏞️ РЕЧНОЙ СТОК</text>
             </g>
 
-            {/* Rain drops */}
+            {/* ===== RAIN DROPS ===== */}
             <g onClick={() => handleStageClick('precipitation')} style={{ cursor: 'pointer' }}>
-              {[...Array(12)].map((_, i) => (
-                <line
-                  key={i}
-                  x1={440 + (i % 6) * 20}
-                  y1={140 + Math.floor(i / 6) * 30}
-                  x2={440 + (i % 6) * 20}
-                  y2={155 + Math.floor(i / 6) * 30}
-                  stroke="#1e40af"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  opacity="0.8"
-                >
-                  <animate
-                    attributeName="y1"
-                    values={`${140 + Math.floor(i / 6) * 30};${280 + Math.floor(i / 6) * 30}`}
-                    dur={`${1 + (i % 3) * 0.3}s`}
-                    begin={`${i * 0.1}s`}
-                    repeatCount="indefinite"
-                  />
-                  <animate
-                    attributeName="y2"
-                    values={`${155 + Math.floor(i / 6) * 30};${295 + Math.floor(i / 6) * 30}`}
-                    dur={`${1 + (i % 3) * 0.3}s`}
-                    begin={`${i * 0.1}s`}
-                    repeatCount="indefinite"
-                  />
-                  <animate
-                    attributeName="opacity"
-                    values="0.8;0.8;0"
-                    dur={`${1 + (i % 3) * 0.3}s`}
-                    begin={`${i * 0.1}s`}
-                    repeatCount="indefinite"
-                  />
-                </line>
-              ))}
-              <text x="480" y="320" textAnchor="middle" fontSize="14" fontWeight="800" fill="#1e3a8a">🌧️ ОСАДКИ</text>
-            </g>
-
-            {/* Evaporation arrows (from sea up) */}
-            <g onClick={() => handleStageClick('evaporation')} style={{ cursor: 'pointer' }}>
-              {[...Array(5)].map((_, i) => (
-                <g key={i}>
-                  <circle
-                    cx={430 + i * 35}
-                    cy={430}
-                    r="4"
-                    fill="#fbbf24"
+              {[...Array(20)].map((_, i) => {
+                const x = 500 + (i % 8) * 25
+                const startY = 130 + Math.floor(i / 8) * 40
+                return (
+                  <line
+                    key={i}
+                    x1={x}
+                    y1={startY}
+                    x2={x}
+                    y2={startY + 15}
+                    stroke="#1d4ed8"
+                    strokeWidth="3"
+                    strokeLinecap="round"
                     opacity="0.8"
                   >
                     <animate
-                      attributeName="cy"
-                      values="430;300;200"
-                      dur={`${3 + i * 0.3}s`}
-                      begin={`${i * 0.5}s`}
+                      attributeName="y1"
+                      values={`${startY};${350 + Math.floor(i / 8) * 30}`}
+                      dur={`${1.2 + (i % 4) * 0.2}s`}
+                      begin={`${i * 0.1}s`}
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="y2"
+                      values={`${startY + 15};${365 + Math.floor(i / 8) * 30}`}
+                      dur={`${1.2 + (i % 4) * 0.2}s`}
+                      begin={`${i * 0.1}s`}
                       repeatCount="indefinite"
                     />
                     <animate
                       attributeName="opacity"
-                      values="0.8;0.5;0"
-                      dur={`${3 + i * 0.3}s`}
-                      begin={`${i * 0.5}s`}
+                      values="0.8;0.8;0"
+                      dur={`${1.2 + (i % 4) * 0.2}s`}
+                      begin={`${i * 0.1}s`}
+                      repeatCount="indefinite"
+                    />
+                  </line>
+                )
+              })}
+            </g>
+
+            {/* ===== EVAPORATION PARTICLES ===== */}
+            <g onClick={() => handleStageClick('evaporation')} style={{ cursor: 'pointer' }}>
+              {[...Array(8)].map((_, i) => (
+                <g key={i}>
+                  <circle
+                    cx={440 + i * 45}
+                    cy={500}
+                    r="5"
+                    fill="#fbbf24"
+                    opacity="0.7"
+                  >
+                    <animate
+                      attributeName="cy"
+                      values="500;350;200"
+                      dur={`${3.5 + i * 0.3}s`}
+                      begin={`${i * 0.4}s`}
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="0.7;0.4;0"
+                      dur={`${3.5 + i * 0.3}s`}
+                      begin={`${i * 0.4}s`}
                       repeatCount="indefinite"
                     />
                     <animate
                       attributeName="r"
-                      values="4;6;3"
-                      dur={`${3 + i * 0.3}s`}
-                      begin={`${i * 0.5}s`}
+                      values="5;7;3"
+                      dur={`${3.5 + i * 0.3}s`}
+                      begin={`${i * 0.4}s`}
                       repeatCount="indefinite"
                     />
                   </circle>
                 </g>
               ))}
-              <text x="500" y="410" textAnchor="middle" fontSize="14" fontWeight="800" fill="#92400e">🌊 ИСПАРЕНИЕ</text>
             </g>
 
-            {/* Transpiration arrows (from trees up) */}
+            {/* ===== TRANSPERSION PARTICLES ===== */}
             <g onClick={() => handleStageClick('transpiration')} style={{ cursor: 'pointer' }}>
-              {[85, 204, 325, 685, 824, 925].map((x, i) => (
+              {[50, 130, 220, 310, 870, 960, 1050, 1140].map((x, i) => (
                 <circle
                   key={i}
                   cx={x}
-                  cy={370}
-                  r="3"
-                  fill="#10b981"
+                  cy={450}
+                  r="4"
+                  fill="#4ade80"
+                  opacity="0.6"
+                >
+                  <animate
+                    attributeName="cy"
+                    values="450;350;250"
+                    dur={`${3 + i * 0.2}s`}
+                    begin={`${i * 0.3}s`}
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="opacity"
+                    values="0.6;0.3;0"
+                    dur={`${3 + i * 0.2}s`}
+                    begin={`${i * 0.3}s`}
+                    repeatCount="indefinite"
+                  />
+                </circle>
+              ))}
+            </g>
+
+            {/* ===== INFILTRATION PARTICLES ===== */}
+            <g onClick={() => handleStageClick('infiltration')} style={{ cursor: 'pointer' }}>
+              {[80, 180, 280, 880, 980, 1100].map((x, i) => (
+                <circle
+                  key={i}
+                  cx={x}
+                  cy={510}
+                  r="4"
+                  fill="#a78bfa"
                   opacity="0.7"
                 >
                   <animate
                     attributeName="cy"
-                    values="370;280;200"
-                    dur={`${3 + i * 0.2}s`}
-                    begin={`${i * 0.4}s`}
+                    values="510;580;660"
+                    dur={`${3 + i * 0.3}s`}
+                    begin={`${i * 0.5}s`}
                     repeatCount="indefinite"
                   />
                   <animate
                     attributeName="opacity"
                     values="0.7;0.4;0"
-                    dur={`${3 + i * 0.2}s`}
-                    begin={`${i * 0.4}s`}
+                    dur={`${3 + i * 0.3}s`}
+                    begin={`${i * 0.5}s`}
                     repeatCount="indefinite"
                   />
                 </circle>
               ))}
-              <text x="85" y="345" textAnchor="middle" fontSize="13" fontWeight="800" fill="#065f46">🌳 ТРАНС</text>
-              <text x="85" y="360" textAnchor="middle" fontSize="13" fontWeight="800" fill="#065f46">ПИРАЦИЯ</text>
             </g>
 
-            {/* Infiltration arrows (into ground) */}
+            {/* ===== BIG ARROWS WITH LABELS ===== */}
+
+            {/* 1. EVAPORATION arrow: sea -> up */}
+            <g onClick={() => handleStageClick('evaporation')} style={{ cursor: 'pointer' }}>
+              <path
+                d="M 500 480 C 480 400 450 320 500 220"
+                stroke="#ea580c"
+                strokeWidth="6"
+                fill="none"
+                strokeDasharray="12 8"
+                markerEnd="url(#arrowOrange)"
+                opacity="0.9"
+              >
+                <animate attributeName="stroke-dashoffset" from="40" to="0" dur="2s" repeatCount="indefinite" />
+              </path>
+              {/* Label background */}
+              <rect x="340" y="300" width="160" height="40" rx="20" fill="white" stroke="#ea580c" strokeWidth="3" opacity="0.95" />
+              <text x="420" y="326" textAnchor="middle" fontSize="16" fontWeight="900" fill="#ea580c">ИСПАРЕНИЕ</text>
+            </g>
+
+            {/* 2. CONDENSATION arrow: vapor -> cloud */}
+            <g onClick={() => handleStageClick('condensation')} style={{ cursor: 'pointer' }}>
+              <path
+                d="M 520 220 C 540 180 570 150 600 130"
+                stroke="#475569"
+                strokeWidth="6"
+                fill="none"
+                strokeDasharray="12 8"
+                markerEnd="url(#arrowGray)"
+                opacity="0.9"
+              >
+                <animate attributeName="stroke-dashoffset" from="40" to="0" dur="2s" repeatCount="indefinite" />
+              </path>
+              <rect x="560" y="170" width="180" height="40" rx="20" fill="white" stroke="#475569" strokeWidth="3" opacity="0.95" />
+              <text x="650" y="196" textAnchor="middle" fontSize="16" fontWeight="900" fill="#475569">КОНДЕНСАЦИЯ</text>
+            </g>
+
+            {/* 3. PRECIPITATION arrow: cloud -> down */}
+            <g onClick={() => handleStageClick('precipitation')} style={{ cursor: 'pointer' }}>
+              <path
+                d="M 620 140 C 630 200 640 300 620 400"
+                stroke="#2563eb"
+                strokeWidth="6"
+                fill="none"
+                strokeDasharray="12 8"
+                markerEnd="url(#arrowBlue)"
+                opacity="0.9"
+              >
+                <animate attributeName="stroke-dashoffset" from="40" to="0" dur="2s" repeatCount="indefinite" />
+              </path>
+              <rect x="660" y="260" width="140" height="40" rx="20" fill="white" stroke="#2563eb" strokeWidth="3" opacity="0.95" />
+              <text x="730" y="286" textAnchor="middle" fontSize="16" fontWeight="900" fill="#2563eb">ОСАДКИ</text>
+            </g>
+
+            {/* 4. RUNOFF arrow: mountain -> sea */}
+            <g onClick={() => handleStageClick('runoff')} style={{ cursor: 'pointer' }}>
+              <path
+                d="M 650 470 C 660 490 650 510 620 530"
+                stroke="#0891b2"
+                strokeWidth="6"
+                fill="none"
+                strokeDasharray="12 8"
+                markerEnd="url(#arrowCyan)"
+                opacity="0.9"
+              >
+                <animate attributeName="stroke-dashoffset" from="40" to="0" dur="2s" repeatCount="indefinite" />
+              </path>
+              <rect x="680" y="470" width="130" height="40" rx="20" fill="white" stroke="#0891b2" strokeWidth="3" opacity="0.95" />
+              <text x="745" y="496" textAnchor="middle" fontSize="16" fontWeight="900" fill="#0891b2">СТОК</text>
+            </g>
+
+            {/* 5. TRANSPIRATION arrow: trees -> up */}
+            <g onClick={() => handleStageClick('transpiration')} style={{ cursor: 'pointer' }}>
+              <path
+                d="M 200 440 C 220 380 280 300 400 200"
+                stroke="#059669"
+                strokeWidth="6"
+                fill="none"
+                strokeDasharray="12 8"
+                markerEnd="url(#arrowGreen)"
+                opacity="0.9"
+              >
+                <animate attributeName="stroke-dashoffset" from="40" to="0" dur="2s" repeatCount="indefinite" />
+              </path>
+              <rect x="100" y="340" width="200" height="40" rx="20" fill="white" stroke="#059669" strokeWidth="3" opacity="0.95" />
+              <text x="200" y="366" textAnchor="middle" fontSize="16" fontWeight="900" fill="#059669">ТРАНСИПРАЦИЯ</text>
+            </g>
+
+            {/* 6. INFILTRATION arrow: ground -> down */}
             <g onClick={() => handleStageClick('infiltration')} style={{ cursor: 'pointer' }}>
-              {[100, 250, 700, 850].map((x, i) => (
-                <g key={i}>
-                  <circle cx={x} cy={430} r="3" fill="#8b5cf6" opacity="0.8">
-                    <animate
-                      attributeName="cy"
-                      values="430;500;570"
-                      dur={`${3 + i * 0.3}s`}
-                      begin={`${i * 0.5}s`}
-                      repeatCount="indefinite"
-                    />
-                    <animate
-                      attributeName="opacity"
-                      values="0.8;0.4;0"
-                      dur={`${3 + i * 0.3}s`}
-                      begin={`${i * 0.5}s`}
-                      repeatCount="indefinite"
-                    />
-                  </circle>
-                </g>
-              ))}
-              <text x="200" y="560" textAnchor="middle" fontSize="14" fontWeight="800" fill="#5b21b6">💧 ИНФИЛЬТРАЦИЯ</text>
-              <text x="200" y="578" textAnchor="middle" fontSize="12" fill="#5b21b6">(подземные воды)</text>
+              <path
+                d="M 150 520 L 150 620"
+                stroke="#7c3aed"
+                strokeWidth="6"
+                fill="none"
+                strokeDasharray="12 8"
+                markerEnd="url(#arrowPurple)"
+                opacity="0.9"
+              >
+                <animate attributeName="stroke-dashoffset" from="40" to="0" dur="2s" repeatCount="indefinite" />
+              </path>
+              <rect x="30" y="560" width="220" height="40" rx="20" fill="white" stroke="#7c3aed" strokeWidth="3" opacity="0.95" />
+              <text x="140" y="586" textAnchor="middle" fontSize="14" fontWeight="900" fill="#7c3aed">ИНФИЛЬТРАЦИЯ</text>
             </g>
 
-            {/* Big cycle arrows */}
-            {/* Evaporation: sea -> cloud */}
-            <path
-              d="M 480 380 Q 400 250 500 150"
-              stroke="#1e40af"
-              strokeWidth="3.5"
-              fill="none"
-              strokeDasharray="8 6"
-              markerEnd="url(#arrowBlue)"
-              opacity="0.9"
-            >
-              <animate attributeName="stroke-dashoffset" from="28" to="0" dur="1.5s" repeatCount="indefinite" />
-            </path>
+            {/* ===== LOCATION LABELS ===== */}
+            <rect x="440" y="560" width="120" height="35" rx="10" fill="#0369a1" opacity="0.8" />
+            <text x="500" y="583" textAnchor="middle" fontSize="16" fontWeight="900" fill="white">🌊 ОКЕАН</text>
 
-            {/* Cloud -> precipitation */}
-            <path
-              d="M 520 130 Q 540 200 500 280"
-              stroke="#1e40af"
-              strokeWidth="3.5"
-              fill="none"
-              strokeDasharray="8 6"
-              markerEnd="url(#arrowBlue)"
-              opacity="0.9"
-            >
-              <animate attributeName="stroke-dashoffset" from="28" to="0" dur="1.5s" repeatCount="indefinite" />
-            </path>
+            <rect x="130" y="480" width="140" height="30" rx="10" fill="#166534" opacity="0.8" />
+            <text x="200" y="500" textAnchor="middle" fontSize="14" fontWeight="900" fill="white">🌳 СУША</text>
 
-            {/* Runoff: mountain -> sea */}
-            <path
-              d="M 560 430 Q 540 470 520 500"
-              stroke="#0891b2"
-              strokeWidth="3.5"
-              fill="none"
-              strokeDasharray="8 6"
-              markerEnd="url(#arrowCyan)"
-              opacity="0.9"
-            >
-              <animate attributeName="stroke-dashoffset" from="28" to="0" dur="1.5s" repeatCount="indefinite" />
-            </path>
+            <rect x="930" y="480" width="140" height="30" rx="10" fill="#166534" opacity="0.8" />
+            <text x="1000" y="500" textAnchor="middle" fontSize="14" fontWeight="900" fill="white">🌳 СУША</text>
 
-            {/* Transpiration: trees -> cloud */}
-            <path
-              d="M 300 350 Q 350 250 450 140"
-              stroke="#047857"
-              strokeWidth="3.5"
-              fill="none"
-              strokeDasharray="8 6"
-              markerEnd="url(#arrowGreen)"
-              opacity="0.9"
-            >
-              <animate attributeName="stroke-dashoffset" from="28" to="0" dur="1.5s" repeatCount="indefinite" />
-            </path>
+            <rect x="50" y="650" width="200" height="30" rx="10" fill="#451a03" opacity="0.8" />
+            <text x="150" y="670" textAnchor="middle" fontSize="13" fontWeight="900" fill="white">💧 ПОДЗЕМНЫЕ ВОДЫ</text>
 
-            {/* Infiltration: ground -> underground */}
-            <path
-              d="M 150 430 L 150 540"
-              stroke="#7c3aed"
-              strokeWidth="3.5"
-              fill="none"
-              strokeDasharray="8 6"
-              markerEnd="url(#arrowPurple)"
-              opacity="0.9"
-            >
-              <animate attributeName="stroke-dashoffset" from="28" to="0" dur="1.5s" repeatCount="indefinite" />
-            </path>
+            <rect x="950" y="650" width="200" height="30" rx="10" fill="#451a03" opacity="0.8" />
+            <text x="1050" y="670" textAnchor="middle" fontSize="13" fontWeight="900" fill="white">💧 ПОДЗЕМНЫЕ ВОДЫ</text>
+
+            {/* Title */}
+            <rect x="350" y="10" width="500" height="50" rx="25" fill="white" opacity="0.9" stroke="#0284c7" strokeWidth="3" />
+            <text x="600" y="42" textAnchor="middle" fontSize="22" fontWeight="900" fill="#0c4a6e">МИРОВОЙ КРУГОВОРОТ ВОДЫ</text>
 
           </svg>
         </div>
+      </div>
 
-        {/* Cycle chain */}
-        <div className="mt-6 bg-white rounded-2xl shadow-lg p-5 border-2 border-blue-100">
-          <h2 className="text-xl font-black text-slate-800 mb-3 text-center">🔄 Цепочка круговорота</h2>
-          <div className="flex flex-wrap items-center justify-center gap-2 text-sm md:text-base">
-            {[
-              { key: 'evaporation', label: 'Испарение', emoji: '🌊' },
-              { key: 'condensation', label: 'Конденсация', emoji: '☁️' },
-              { key: 'precipitation', label: 'Осадки', emoji: '🌧️' },
-              { key: 'runoff', label: 'Сток', emoji: '🏞️' },
-              { key: 'infiltration', label: 'Инфильтрация', emoji: '💧' },
-              { key: 'transpiration', label: 'Транспирация', emoji: '🌳' },
-            ].map((s, i) => (
-              <div key={s.key} className="flex items-center gap-2">
-                <button
-                  onClick={() => handleStageClick(s.key as Stage)}
-                  className="px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-100 to-cyan-100 hover:from-blue-200 hover:to-cyan-200 font-bold text-slate-700 transition-all hover:scale-105"
-                >
-                  {s.emoji} {s.label}
-                </button>
-                {i < 5 && <span className="text-blue-400 text-xl">→</span>}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Info panel */}
-        {info && (
-          <div className="mt-6 bg-white rounded-2xl shadow-xl p-6 border-l-8 animate-fade-in" style={{ borderLeftColor: info.color }}>
-            <div className="flex items-start justify-between flex-wrap gap-4">
+      {/* Info panel */}
+      {info && (
+        <div className="max-w-7xl mx-auto px-4 mt-4">
+          <div className="rounded-2xl shadow-xl p-5 md:p-7 border-l-8 animate-fade-in" style={{ borderLeftColor: info.color, backgroundColor: info.bgColor }}>
+            <div className="flex items-start justify-between flex-wrap gap-3">
               <div className="flex-1 min-w-[250px]">
-                <h2 className="text-2xl md:text-3xl font-black text-slate-800 flex items-center gap-2">
-                  <span className="text-4xl">{info.emoji}</span>
+                <h2 className="text-xl md:text-3xl font-black text-slate-800 flex items-center gap-2">
+                  <span className="text-3xl md:text-4xl">{info.emoji}</span>
                   {info.title}
                 </h2>
                 <p className="mt-3 text-slate-700 text-base md:text-lg leading-relaxed">
@@ -583,68 +660,125 @@ export default function App() {
               </div>
               <button
                 onClick={() => setActiveStage(null)}
-                className="text-slate-400 hover:text-slate-700 text-3xl leading-none"
+                className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-red-50 transition-colors text-2xl font-bold"
               >
                 ×
               </button>
             </div>
-            <div className="mt-5">
-              <h3 className="font-black text-slate-800 mb-2">🌟 Интересные факты:</h3>
+            <div className="mt-5 bg-white rounded-xl p-4 shadow-inner">
+              <h3 className="font-black text-slate-800 mb-3 text-lg">🌟 Интересные факты:</h3>
               <ul className="space-y-2">
                 {info.facts.map((f, i) => (
                   <li key={i} className="flex items-start gap-2 text-slate-700">
-                    <span className="text-lg">•</span>
-                    <span>{f}</span>
+                    <span className="text-blue-500 font-bold mt-0.5">💧</span>
+                    <span className="text-sm md:text-base">{f}</span>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
-        )}
+        </div>
+      )}
 
-        {/* Water stats */}
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-2xl p-5 shadow-lg">
-            <div className="text-4xl mb-2">🌍</div>
-            <div className="text-3xl font-black">97%</div>
-            <div className="text-blue-100 text-sm">воды на Земле — солёная (океаны)</div>
+      {/* Stage buttons */}
+      <div className="max-w-7xl mx-auto px-4 mt-6">
+        <h2 className="text-xl font-black text-slate-800 mb-3 text-center">📚 Изучи каждый этап:</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          {Object.entries(stagesData).map(([key, stage]) => (
+            <button
+              key={key}
+              onClick={() => handleStageClick(key as Stage)}
+              className={`p-3 rounded-xl border-3 transition-all duration-300 hover:scale-105 text-center shadow-md ${
+                activeStage === key
+                  ? 'border-4 shadow-xl scale-105'
+                  : 'border-2 border-gray-200 hover:border-gray-400'
+              }`}
+              style={{
+                borderColor: activeStage === key ? stage.color : undefined,
+                backgroundColor: activeStage === key ? stage.bgColor : 'white',
+              }}
+            >
+              <span className="text-2xl block mb-1">{stage.emoji}</span>
+              <span className="text-xs md:text-sm font-bold text-slate-700">{stage.title}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Water stats */}
+      <div className="max-w-7xl mx-auto px-4 mt-6">
+        <h2 className="text-xl font-black text-slate-800 mb-3 text-center">📊 Сколько воды на Земле?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-gradient-to-br from-blue-500 to-blue-800 text-white rounded-2xl p-5 shadow-lg text-center">
+            <div className="text-5xl mb-2">🌊</div>
+            <div className="text-4xl font-black">97%</div>
+            <div className="text-blue-100 text-sm mt-1">солёная вода в океанах</div>
           </div>
-          <div className="bg-gradient-to-br from-cyan-500 to-cyan-700 text-white rounded-2xl p-5 shadow-lg">
-            <div className="text-4xl mb-2">🧊</div>
-            <div className="text-3xl font-black">2%</div>
-            <div className="text-cyan-100 text-sm">пресной воды заперто в ледниках</div>
+          <div className="bg-gradient-to-br from-cyan-400 to-cyan-700 text-white rounded-2xl p-5 shadow-lg text-center">
+            <div className="text-5xl mb-2">🧊</div>
+            <div className="text-4xl font-black">2%</div>
+            <div className="text-cyan-100 text-sm mt-1">пресной воды в ледниках</div>
           </div>
-          <div className="bg-gradient-to-br from-emerald-500 to-emerald-700 text-white rounded-2xl p-5 shadow-lg">
-            <div className="text-4xl mb-2">💧</div>
-            <div className="text-3xl font-black">~1%</div>
-            <div className="text-emerald-100 text-sm">пресной воды доступно людям и природе</div>
+          <div className="bg-gradient-to-br from-emerald-500 to-emerald-800 text-white rounded-2xl p-5 shadow-lg text-center">
+            <div className="text-5xl mb-2">💧</div>
+            <div className="text-4xl font-black">~1%</div>
+            <div className="text-emerald-100 text-sm mt-1">доступна людям и природе</div>
           </div>
         </div>
+      </div>
 
-        {/* Fun facts */}
-        <div className="mt-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg p-6 border-2 border-purple-100">
-          <h2 className="text-2xl font-black text-slate-800 mb-4 text-center">✨ Удивительные факты о воде</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {/* Fun facts */}
+      <div className="max-w-7xl mx-auto px-4 mt-6">
+        <h2 className="text-xl font-black text-slate-800 mb-3 text-center">✨ Удивительные факты о воде</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { emoji: '🦕', text: 'Вода, которую ты пьёшь сегодня, та же самая, что пили динозавры миллионы лет назад! Круговорот воды постоянно её очищает.' },
+            { emoji: '🚶', text: 'Человек на 60% состоит из воды. Мозг — на 75%, а кровь — на 92%.' },
+            { emoji: '🌊', text: 'В мировом океане столько воды, что если бы ею покрыть всю Землю, слой был бы глубиной около 3 км!' },
+            { emoji: '⏳', text: 'Капля воды может «путешествовать» в круговороте от нескольких дней до миллионов лет.' },
+            { emoji: '🌡️', text: 'Вода — единственное вещество на Земле, которое в природе встречается сразу в трёх состояниях: жидком, твёрдом и газообразном.' },
+            { emoji: '🏔️', text: 'Самые старые ледники Антарктиды содержат лёд возрастом более 800 000 лет!' },
+          ].map((f, i) => (
+            <div key={i} className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow border border-sky-100">
+              <div className="text-4xl mb-2">{f.emoji}</div>
+              <p className="text-slate-700 text-sm">{f.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Cycle summary */}
+      <div className="max-w-7xl mx-auto px-4 mt-6 mb-8">
+        <div className="bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl p-6 text-white shadow-lg">
+          <h2 className="text-xl font-black mb-4 text-center">🔄 Краткая схема круговорота</h2>
+          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 text-center">
             {[
-              { emoji: '🦕', text: 'Вода, которую ты пьёшь сегодня, та же самая, что пили динозавры миллионы лет назад! Круговорот воды постоянно её очищает.' },
-              { emoji: '🚶', text: 'Человек на 60% состоит из воды. Мозг — на 75%, а кровь — на 92%.' },
-              { emoji: '🌊', text: 'В мировом океане столько воды, что если бы ею покрыть всю Землю, слой был бы глубиной около 3 км!' },
-              { emoji: '⏳', text: 'Капля воды может «путешествовать» в круговороте от нескольких дней до миллионов лет.' },
-              { emoji: '🌡️', text: 'Вода — единственное вещество на Земле, которое в природе встречается сразу в трёх состояниях: жидком, твёрдом и газообразном.' },
-              { emoji: '🏔️', text: 'Самые старые ледники Антарктиды содержат лёд возрастом более 800 000 лет!' },
-            ].map((f, i) => (
-              <div key={i} className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
-                <div className="text-3xl mb-2">{f.emoji}</div>
-                <p className="text-slate-700 text-sm">{f.text}</p>
+              { emoji: '☀️', label: 'Солнце нагревает' },
+              { emoji: '💨', label: 'Испарение' },
+              { emoji: '☁️', label: 'Облака' },
+              { emoji: '🌧️', label: 'Осадки' },
+              { emoji: '🏞️', label: 'Сток' },
+              { emoji: '🌊', label: 'Океан' },
+            ].map((s, i) => (
+              <div key={i} className="flex items-center gap-2 md:gap-3">
+                <div className="bg-white/20 backdrop-blur-sm rounded-xl p-2 md:p-3 min-w-[80px] md:min-w-[100px]">
+                  <span className="text-2xl md:text-3xl block">{s.emoji}</span>
+                  <span className="text-xs md:text-sm font-bold">{s.label}</span>
+                </div>
+                {i < 5 && <span className="text-xl md:text-2xl">→</span>}
               </div>
             ))}
+            <span className="text-xl md:text-2xl">↻</span>
           </div>
+          <p className="text-center mt-4 text-blue-100 text-sm">
+            Этот цикл повторяется бесконечно, обеспечивая жизнь на Земле!
+          </p>
         </div>
-
-        <footer className="mt-8 text-center text-slate-500 text-sm pb-6">
-          <p>💡 Нажимай на элементы схемы, чтобы узнать больше! 🌍</p>
-        </footer>
       </div>
+
+      <footer className="bg-white/60 backdrop-blur-sm border-t border-sky-200 py-4 text-center">
+        <p className="text-slate-500 text-sm">💧 Интерактивный урок «Круговорот воды в природе» • Для школьников 🎓</p>
+      </footer>
 
       {/* Quiz modal */}
       {showQuiz && (
@@ -658,7 +792,7 @@ export default function App() {
                 <div className="flex justify-between items-center mb-4">
                   <h2 className="text-2xl font-black text-slate-800">🧠 Викторина</h2>
                   <span className="bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded-full text-sm">
-                    Вопрос {quizStep + 1} / {quizQuestions.length}
+                    {quizStep + 1} / {quizQuestions.length}
                   </span>
                 </div>
                 <div className="w-full bg-slate-200 rounded-full h-2 mb-6">
@@ -678,7 +812,7 @@ export default function App() {
                     if (selectedAnswer !== null) {
                       if (isCorrect) cls = 'bg-green-100 border-green-500 text-green-800'
                       else if (isSelected) cls = 'bg-red-100 border-red-500 text-red-800'
-                      else cls = 'bg-slate-50 border-slate-200 text-slate-500'
+                      else cls = 'bg-slate-50 border-slate-200 text-slate-400'
                     }
                     return (
                       <button
@@ -686,7 +820,7 @@ export default function App() {
                         onClick={() => handleQuizAnswer(i)}
                         className={`w-full text-left p-4 rounded-xl border-2 font-semibold transition-all ${cls}`}
                       >
-                        <span className="mr-2">{String.fromCharCode(65 + i)}.</span>
+                        <span className="mr-2 font-black">{String.fromCharCode(65 + i)}.</span>
                         {opt}
                         {selectedAnswer !== null && isCorrect && ' ✓'}
                         {selectedAnswer !== null && isSelected && !isCorrect && ' ✗'}
@@ -704,8 +838,8 @@ export default function App() {
                   {score === quizQuestions.length ? 'Идеально!' : score >= 3 ? 'Отлично!' : 'Неплохо!'}
                 </h2>
                 <p className="text-xl text-slate-600 mb-6">
-                  Ты ответил правильно на <span className="font-black text-blue-600">{score}</span> из{' '}
-                  <span className="font-black">{quizQuestions.length}</span> вопросов
+                  Правильных ответов: <span className="font-black text-blue-600">{score}</span> из{' '}
+                  <span className="font-black">{quizQuestions.length}</span>
                 </p>
                 <div className="flex gap-3 justify-center flex-wrap">
                   <button
